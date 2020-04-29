@@ -52,14 +52,8 @@ authHEADER = 'apiToken '+key
 restdata={'baseURL': baseURL, 'auth': authHEADER}
 
 
-#apiKey='wgb4-kyEq9VdZ-BZ'
-#conn={'baseURL': 'https://demoeu-instana.instana.io', 'auth': 'apiToken wgb4-kyEq9VdZ-BZ'}
 
-#OuiSNCF
-#conn={'baseURL': 'https://ouisncf-ouisncf.instana.io', 'auth': 'apiToken mgGM5xlIdbSdOfgS'}
-#Apple Conn
-conn={'baseURL': 'https://nurv.apple.com', 'auth': 'apiToken G3lamdCqKElwiKWN'}
-DFQ = 'entity.zone:\"Mobile Apps\" AND entity.type:host'
+DFQ = 'entity.zone:\"k8s-demo" AND entity.type:host'
 plugin='host'
 url = conn['baseURL'] + "/api/infrastructure-monitoring/snapshots"
 params = {'query' :DFQ, 'to' :'', 'windowSize' :'2678400000' ,'plugin' :plugin, 'offline' :'false', 'size':''}
